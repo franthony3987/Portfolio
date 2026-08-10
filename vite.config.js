@@ -4,6 +4,7 @@ import { fileURLToPath, URL } from 'node:url';
 const entry = (path) => fileURLToPath(new URL(path, import.meta.url));
 
 export default defineConfig({
+  base: process.env.NODE_ENV === 'production' ? '/Portfolio/' : '/',
   build: {
     rollupOptions: {
       input: {
