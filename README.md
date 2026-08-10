@@ -4,4 +4,6 @@
   <img src="src/assets/profile-photo.png" alt="Frank Anthony" width="260" />
 </p>
 
-Personal portfolio for Frank Anthony, Full Stack AI & Cloud Engineer.
+<p align="center">
+  <strong>Full Stack AI &amp; Cloud Engineer</strong>
+</p>

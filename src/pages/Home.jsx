@@ -352,7 +352,7 @@ function Home() {
           </div>
           <div className="site-footer__socials">
             <a className="social-linkedin" href="https://www.linkedin.com/in/replace-me/" target="_blank" rel="noreferrer" aria-label="LinkedIn placeholder"><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/linkedin.svg" alt="" /></a>
-            <a href="https://github.com/replace-me" target="_blank" rel="noreferrer" aria-label="GitHub placeholder"><BrandIcon icon={siGithub} color="#f7f7f2" /></a>
+            <a href="https://github.com/franthony3987" target="_blank" rel="noreferrer" aria-label="Frank Anthony on GitHub"><BrandIcon icon={siGithub} color="#f7f7f2" /></a>
           </div>
           <div className="site-footer__bottom">
             <span>© 2026 Frank Anthony</span>
