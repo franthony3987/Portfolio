@@ -1,13 +1,20 @@
 import { useEffect, useState } from 'react';
+import { ArrowLeft, ArrowRight, ArrowUp, Grid2X2 } from 'lucide-react';
 import './ProjectDetail.css';
 import logo from '../assets/logo.png';
 import githubIcon from '../assets/github.png';
 import linkedinIcon from '../assets/Linkedin.png';
+import { projects } from '../data/projects';
 
 function ProjectDetail({ project }) {
   const [isPreviewOpen, setIsPreviewOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const homeUrl = import.meta.env.BASE_URL;
   const projectsUrl = `${homeUrl}?section=projects`;
+  const projectIndex = projects.findIndex(({ slug }) => slug === project.slug);
+  const previousProject = projectIndex > 0 ? projects[projectIndex - 1] : null;
+  const nextProject = projectIndex < projects.length - 1 ? projects[projectIndex + 1] : null;
+  const projectUrl = (slug) => `${homeUrl}projects/${slug}/`;
 
   useEffect(() => {
     const handleKeyDown = (event) => {
@@ -18,12 +25,24 @@ function ProjectDetail({ project }) {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
+  useEffect(() => {
+    const updateScrollState = () => setIsScrolled(window.scrollY > 12);
+    updateScrollState();
+    window.addEventListener('scroll', updateScrollState, { passive: true });
+    return () => window.removeEventListener('scroll', updateScrollState);
+  }, []);
+
   return (
     <div className="project-page">
       <header className="project-page__header">
         <a className="brand" href={homeUrl}><img className="project-page__logo" src={logo} alt="Frank Anthony" /></a>
         <a className="project-page__back" href={projectsUrl} aria-label="Back to the projects section on the home page">Back to projects</a>
       </header>
+      {isScrolled && (
+        <button className="project-scroll-top" type="button" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} aria-label="Scroll to top" title="Scroll to top">
+          <ArrowUp aria-hidden="true" strokeWidth={2.25} />
+        </button>
+      )}
       <main className="project-page__main">
         <h1>{project.title}</h1>
         <p className="project-page__subtitle">{project.subtitle}</p>
@@ -73,6 +92,11 @@ function ProjectDetail({ project }) {
             <p>This page is reserved for the project story, responsibilities, architecture, technology choices, and outcomes.</p>
           </section>
         )}
+        <nav className="project-navigation" aria-label="Project navigation">
+          {previousProject && <a className="project-navigation__previous" href={projectUrl(previousProject.slug)} aria-label={`Previous project: ${previousProject.title}`}><ArrowLeft aria-hidden="true" /><span>Previous</span></a>}
+          <a className="project-navigation__all" href={projectsUrl}><Grid2X2 aria-hidden="true" /><span>View all projects</span></a>
+          {nextProject && <a className="project-navigation__next" href={projectUrl(nextProject.slug)} aria-label={`Next project: ${nextProject.title}`}><span>Next</span><ArrowRight aria-hidden="true" /></a>}
+        </nav>
       </main>
       <section className="project-closing">
         <div className="project-closing__waves" aria-hidden="true">{Array.from({ length: 7 }, (_, index) => <span key={index} />)}</div>

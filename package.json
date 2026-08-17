@@ -5,30 +5,19 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
     "@vitejs/plugin-react": "latest",
     "lucide-react": "^1.30.0",
-    "react": "latest",
-    "react-dom": "latest",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
     "simple-icons": "^16.28.0"
   },
   "devDependencies": {
     "gh-pages": "^6.3.0",
     "vite": "^8.2.1"
   },
-  "homepage": "https://frankanthony.github.io",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "deploy": "gh-pages -d dist"
-  },
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
-  }
+  "homepage": "https://frankanthony.github.io"
 }
