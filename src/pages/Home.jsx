@@ -1,8 +1,12 @@
 import { useEffect, useRef, useState } from 'react';
-import { Bot, Boxes, ChevronLeft, ChevronRight, Cloud, Code2, Database, Network, Play, Server, ShieldCheck, Star, Workflow } from 'lucide-react';
-import { siAnthropic, siDocker, siFastapi, siGithub, siGithubactions, siGooglegemini, siGooglecloud, siKubernetes, siLangchain, siLanggraph, siMongodb, siNextdotjs, siNodedotjs, siPostgresql, siPython, siPytorch, siReact, siRedis, siTailwindcss, siTensorflow, siTerraform, siTypescript } from 'simple-icons';
+import { ArrowUp, Bot, Boxes, Cloud, Code2, Database, Network, Server, ShieldCheck, Workflow } from 'lucide-react';
+import { siAnthropic, siDocker, siFastapi, siGithubactions, siGooglegemini, siGooglecloud, siKubernetes, siLangchain, siLanggraph, siMongodb, siNextdotjs, siNodedotjs, siPostgresql, siPython, siPytorch, siReact, siRedis, siTailwindcss, siTensorflow, siTerraform, siTypescript } from 'simple-icons';
 import BrandIcon from '../components/BrandIcon';
 import Hero from '../components/Hero/Hero';
+import logo from '../assets/logo.png';
+import githubIcon from '../assets/github.png';
+import linkedinIcon from '../assets/Linkedin.png';
+import fullStackWorkspace from '../assets/full-stack-workspace.jpeg';
 import { projects } from '../data/projects';
 import { faqs } from '../data/faqs';
 import './Home.css';
@@ -24,7 +28,7 @@ const buildAreas = [
     title: 'Full-Stack Product Engineering',
     longCopy: ['Engineering complete products from architecture to production.', 'I build scalable applications across frontend, backend, databases, and cloud infrastructure, delivering reliable software systems designed for real-world users and business needs.'],
     items: ['React / Next.js applications', 'Backend systems', 'APIs', 'Databases', 'Cloud infrastructure'],
-    image: 'https://msutexas.edu/distance/_assets/images/full-stack-developer.jpg',
+    image: fullStackWorkspace,
   },
   {
     title: 'Intelligent Automation',
@@ -92,12 +96,6 @@ const projectGlobePoint = (latitude, longitude, rotation) => {
   return { depth, left: 50 + x * 43, top: 50 - projectedY * 43 };
 };
 
-const testimonials = [
-  { quote: 'Frank quickly understood our complex requirements and transformed our AI vision into a reliable production system. His combination of technical depth and business understanding was exactly what we needed.', name: 'Ana', role: 'CEO, AI Software Company', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=800&q=85', linkedin: 'https://www.linkedin.com/in/replace-me/' },
-  { quote: 'Frank brought strong technical leadership to our project. He helped us design the system architecture, improve our development process, and deliver a scalable application. Communication was clear, deadlines were respected, and the quality of his work exceeded our expectations.', name: 'James', role: 'Founder, SaaS Platform', image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=85', linkedin: 'https://www.linkedin.com/in/replace-me/' },
-  { quote: 'We needed an engineer who could understand both the technical challenges and the business goals behind our automation project. Frank delivered exactly that. He built intelligent workflows, connected multiple systems, and created a solution that improved our team\'s efficiency and operations.', name: 'Jenifer', role: 'Product Manager, Technology Company', image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=85', linkedin: 'https://www.linkedin.com/in/replace-me/' },
-];
-
 const philosophy = [
   ['Architecture with Intent', ['I design and build software where AI meets engineering, with the belief that every technical decision should serve a meaningful business outcome.', 'The strongest products are not collections of features. They are carefully designed systems that help organizations move faster, serve customers better, and simplify complex operations.'], Boxes],
   ['Data that Makes Intelligence Useful', ['AI is only as valuable as the data, context, and infrastructure behind it.', 'I build reliable data systems and intelligent applications where information is structured, accessible, and transformed into actionable insight.'], Database],
@@ -111,11 +109,10 @@ function Home() {
   const whatBuildRef = useRef(null);
   const projectsTitleRef = useRef(null);
   const techTitleRef = useRef(null);
-  const testimonialsTitleRef = useRef(null);
   const faqTitleRef = useRef(null);
   const [activeBuildArea, setActiveBuildArea] = useState(0);
-  const [activeTestimonial, setActiveTestimonial] = useState(0);
   const [openFaq, setOpenFaq] = useState(-1);
+  const [isHeaderCompact, setIsHeaderCompact] = useState(false);
   const [globeRotation, setGlobeRotation] = useState({ x: -8, y: 0 });
   const [isGlobeDragging, setIsGlobeDragging] = useState(false);
   const globeDragRef = useRef(null);
@@ -126,7 +123,6 @@ function Home() {
       whatBuildRef.current,
       projectsTitleRef.current,
       techTitleRef.current,
-      testimonialsTitleRef.current,
       faqTitleRef.current,
     ].filter(Boolean);
     const observer = new IntersectionObserver((entries) => {
@@ -151,6 +147,25 @@ function Home() {
     return () => {
       observer.disconnect();
       window.clearTimeout(scrollTimer);
+    };
+  }, []);
+
+  useEffect(() => {
+    let animationFrame;
+    const updateHeader = () => {
+      window.cancelAnimationFrame(animationFrame);
+      animationFrame = window.requestAnimationFrame(() => {
+        setIsHeaderCompact(window.scrollY > 12);
+      });
+    };
+
+    updateHeader();
+    window.addEventListener('scroll', updateHeader, { passive: true });
+    window.addEventListener('resize', updateHeader);
+    return () => {
+      window.cancelAnimationFrame(animationFrame);
+      window.removeEventListener('scroll', updateHeader);
+      window.removeEventListener('resize', updateHeader);
     };
   }, []);
 
@@ -185,15 +200,21 @@ function Home() {
 
   return (
     <>
-      <header className="site-header">
-        <button className="brand site-header__brand" type="button" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}><span>FA.</span><b>Frank Anthony</b></button>
+      <header className={`site-header${isHeaderCompact ? ' is-compact' : ''}`}>
+        <button className="brand site-header__brand" type="button" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}><img className="brand__logo" src={logo} alt="Frank Anthony" /></button>
         <nav aria-label="Main navigation">
           <button type="button" onClick={() => scrollToSection('approach')}>About</button>
           <button type="button" onClick={() => scrollToSection('projects')}>Projects</button>
-          <button type="button" onClick={() => scrollToSection('tech-stack')}>Stack</button>
+          <button type="button" onClick={() => scrollToSection('tech-stack')}>Skills</button>
           <button type="button" onClick={() => scrollToSection('faq')}>FAQ</button>
         </nav>
       </header>
+
+      {isHeaderCompact && (
+        <button className="scroll-top" type="button" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} aria-label="Scroll to top" title="Scroll to top">
+          <ArrowUp aria-hidden="true" strokeWidth={2.25} />
+        </button>
+      )}
 
       <Hero />
 
@@ -201,12 +222,6 @@ function Home() {
         <div><strong>10+</strong><span>Years of engineering</span></div>
         <div><strong>50+</strong><span>Products delivered</span></div>
         <div><strong>40+</strong><span>Clients supported</span></div>
-      </section>
-
-      <section className="section video-section" id="video">
-        <div className="video-placeholder" role="img" aria-label="YouTube video placeholder">
-          <span className="video-placeholder__play"><Play fill="currentColor" strokeWidth={1.5} /></span>
-        </div>
       </section>
 
       <section className="section journey" id="approach" ref={journeyRef}>
@@ -253,15 +268,29 @@ function Home() {
       <section className="section" id="projects">
         <h2 className="journey__title" data-reveal ref={projectsTitleRef}>Previous projects.</h2>
         <div className="project-grid">
-          {projects.map(({ number, slug, title, subtitle }) => (
+          {projects.map(({ number, slug, title, subtitle, description, keywords, image, liveUrl, githubUrl }) => (
             <article className="project-tile" key={number}>
-              <span className="project__number">{number}</span>
-              <div>
-                <p className="project__subtitle">{subtitle}</p>
+              <a className="project__preview" href={`/projects/${slug}/`} aria-label={`View ${title} project`}>
+                <img src={image} alt="" />
+                <span className="project__number">{number}</span>
+                <span className="project__subtitle">{subtitle}</span>
+              </a>
+              <div className="project__content">
                 <h3>{title}</h3>
-                <p>Case study details are being prepared.</p>
+                <p>{description}</p>
+                <div className="project__keywords" aria-label={`${title} technologies`}>
+                  {keywords.map((keyword) => <span key={keyword}>{keyword}</span>)}
+                </div>
               </div>
-              <a className="project__link" href={`/projects/${slug}/`}>View project</a>
+              <div className="project__footer">
+                <a className="project__link" href={`/projects/${slug}/`}>View project</a>
+                {(liveUrl || githubUrl) && (
+                  <div className="project__resources">
+                    {liveUrl && <a href={liveUrl} target="_blank" rel="noopener noreferrer">Live site</a>}
+                    {githubUrl && <a href={githubUrl} target="_blank" rel="noopener noreferrer"><img src={githubIcon} alt="" />GitHub</a>}
+                  </div>
+                )}
+              </div>
             </article>
           ))}
         </div>
@@ -300,28 +329,6 @@ function Home() {
         </div>
       </section>
 
-      <section className="section testimonials" id="testimonials">
-        <h2 className="journey__title" data-reveal ref={testimonialsTitleRef}>Testimonials.</h2>
-        <div className="testimonial-slider" aria-roledescription="carousel" aria-label="Testimonials">
-          <article className="testimonial-slide">
-            <img src={testimonials[activeTestimonial].image} alt="" />
-            <div className="testimonial-slide__content">
-              <div className="testimonial-slide__rating" aria-label="Five-star rating">{Array.from({ length: 5 }, (_, index) => <Star key={index} aria-hidden="true" fill="currentColor" />)}</div>
-              <blockquote>{testimonials[activeTestimonial].quote}</blockquote>
-              <footer>
-                <div><strong>{testimonials[activeTestimonial].name}</strong><span>{testimonials[activeTestimonial].role}</span></div>
-                <a className="testimonial-slide__linkedin" href={testimonials[activeTestimonial].linkedin} target="_blank" rel="noreferrer" aria-label={`View ${testimonials[activeTestimonial].name} on LinkedIn`}><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/linkedin.svg" alt="" /></a>
-              </footer>
-            </div>
-          </article>
-          <div className="testimonial-slider__controls">
-            <button type="button" aria-label="Previous testimonial" onClick={() => setActiveTestimonial((activeTestimonial - 1 + testimonials.length) % testimonials.length)}><ChevronLeft /></button>
-            <span>{String(activeTestimonial + 1).padStart(2, '0')} / {String(testimonials.length).padStart(2, '0')}</span>
-            <button type="button" aria-label="Next testimonial" onClick={() => setActiveTestimonial((activeTestimonial + 1) % testimonials.length)}><ChevronRight /></button>
-          </div>
-        </div>
-      </section>
-
       <section className="section faq" id="faq">
         <h2 className="journey__title" data-reveal ref={faqTitleRef}>FAQ.</h2>
         <div className="faq__list">
@@ -339,20 +346,18 @@ function Home() {
         <div className="closing__content">
           <p>Ready when the work matters.</p>
           <h2>Let's turn complex ideas into systems that perform.</h2>
-          <a className="button button--primary" href="https://www.upwork.com/freelancers/~replace-me" target="_blank" rel="noreferrer">Connect on Upwork</a>
+          <a className="button button--primary" href="https://www.upwork.com/freelancers/~replace-me" target="_blank" rel="noopener noreferrer">Connect on Upwork</a>
         </div>
       </section>
 
       <footer className="site-footer">
         <div className="site-footer__inner">
           <div>
-            <button className="brand" type="button" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>FA<span>.</span></button>
-            <p className="site-footer__name">Frank Anthony</p>
-            <p className="site-footer__role">Full Stack AI &amp; Cloud Engineer</p>
+            <button className="brand" type="button" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}><img className="brand__logo" src={logo} alt="Frank Anthony" /></button>
           </div>
           <div className="site-footer__socials">
-            <a className="social-linkedin" href="https://www.linkedin.com/in/replace-me/" target="_blank" rel="noreferrer" aria-label="LinkedIn placeholder"><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/linkedin.svg" alt="" /></a>
-            <a href="https://github.com/franthony3987" target="_blank" rel="noreferrer" aria-label="Frank Anthony on GitHub"><BrandIcon icon={siGithub} color="#f7f7f2" /></a>
+            <a className="social-linkedin" href="https://www.linkedin.com/in/frank-lapalomento" target="_blank" rel="noopener noreferrer" aria-label="Frank Anthony on LinkedIn"><img src={linkedinIcon} alt="" /></a>
+            <a href="https://github.com/franthony3987" target="_blank" rel="noopener noreferrer" aria-label="Frank Anthony on GitHub"><img src={githubIcon} alt="" /></a>
           </div>
           <div className="site-footer__bottom">
             <span>© 2026 Frank Anthony</span>

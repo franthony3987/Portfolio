@@ -25,5 +25,10 @@
     "build": "vite build",
     "preview": "vite preview",
     "deploy": "gh-pages -d dist"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   }
 }

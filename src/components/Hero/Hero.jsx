@@ -1,7 +1,7 @@
 import './Hero.css';
-import { siGithub } from 'simple-icons';
-import BrandIcon from '../BrandIcon';
 import profilePhoto from '../../assets/profile-photo.png';
+import githubIcon from '../../assets/github.png';
+import linkedinIcon from '../../assets/Linkedin.png';
 
 const specialties = ['AI Engineering', 'LLM Applications', 'AI Agents', 'Data Engineering', 'Full-Stack Development', 'Cloud Architecture'];
 
@@ -32,10 +32,10 @@ function Hero() {
         <div className="hero__tags">{specialties.map((specialty) => <span key={specialty}>{specialty}</span>)}</div>
         <div className="hero__actions">
           <button className="button button--primary" type="button" onClick={scrollToProjects}>Explore Projects</button>
-          <a className="button button--secondary" href="https://www.upwork.com/freelancers/~replace-me" target="_blank" rel="noreferrer">Connect on Upwork</a>
+          <a className="button button--secondary" href="https://www.upwork.com/freelancers/~replace-me" target="_blank" rel="noopener noreferrer">Connect on Upwork</a>
           <span className="hero__socials">
-            <a className="social-linkedin" href="https://www.linkedin.com/in/replace-me/" target="_blank" rel="noreferrer" aria-label="LinkedIn placeholder"><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/linkedin.svg" alt="" /></a>
-            <a href="https://github.com/franthony3987" target="_blank" rel="noreferrer" aria-label="Frank Anthony on GitHub"><BrandIcon icon={siGithub} color="#f7f7f2" /></a>
+            <a className="social-linkedin" href="https://www.linkedin.com/in/frank-lapalomento" target="_blank" rel="noopener noreferrer" aria-label="Frank Anthony on LinkedIn"><img src={linkedinIcon} alt="" /></a>
+            <a href="https://github.com/franthony3987" target="_blank" rel="noopener noreferrer" aria-label="Frank Anthony on GitHub"><img src={githubIcon} alt="" /></a>
           </span>
         </div>
       </div>
