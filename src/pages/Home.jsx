@@ -104,6 +104,7 @@ const philosophy = [
 ];
 
 function Home() {
+  const projectUrl = (slug) => `${import.meta.env.BASE_URL}projects/${slug}/`;
   const journeyRef = useRef(null);
   const whatBuildRef = useRef(null);
   const projectsTitleRef = useRef(null);
@@ -269,7 +270,7 @@ function Home() {
         <div className="project-grid">
           {projects.map(({ number, slug, title, subtitle, description, keywords, image, liveUrl, githubUrl }) => (
             <article className="project-tile" key={number}>
-              <a className="project__preview" href={`/projects/${slug}/`} aria-label={`View ${title} project`}>
+              <a className="project__preview" href={projectUrl(slug)} aria-label={`View ${title} project`}>
                 <img src={image} alt="" />
                 <span className="project__number">{number}</span>
                 <span className="project__subtitle">{subtitle}</span>
@@ -282,7 +283,7 @@ function Home() {
                 </div>
               </div>
               <div className="project__footer">
-                <a className="project__link" href={`/projects/${slug}/`}>View project</a>
+                <a className="project__link" href={projectUrl(slug)}>View project</a>
                 {(liveUrl || githubUrl) && (
                   <div className="project__resources">
                     {liveUrl && <a href={liveUrl} target="_blank" rel="noopener noreferrer">Live site</a>}
