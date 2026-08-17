@@ -13,7 +13,7 @@ export default defineConfig({
         aiAutomationSystem: entry('./projects/ai-automation-system/index.html'),
         aiDecisionEngine: entry('./projects/ai-decision-engine/index.html'),
         multiPlatformSocialMediaPublishingSaas: entry('./projects/multi-platform-social-media-publishing-saas/index.html'),
-        fullStackSaasApplication: entry('./projects/full-stack-saas-application/index.html'),
+        dataEngineeringPlatform: entry('./projects/data-engineering-platform/index.html'),
       },
     },
   },

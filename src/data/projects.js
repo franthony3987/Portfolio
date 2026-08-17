@@ -110,7 +110,7 @@ export const projects = [
   },
   {
     number: '05',
-    slug: 'full-stack-saas-application',
+    slug: 'data-engineering-platform',
     title: 'SignalGrid Auto: Vehicle Acquisition Intelligence Platform',
     subtitle: 'Data Engineering & Decision Intelligence',
     description: 'A production data platform that transforms fragmented vehicle listings into normalized, scored acquisition signals for fast, human-reviewed purchasing decisions.',
