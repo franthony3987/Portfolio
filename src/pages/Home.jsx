@@ -5,7 +5,6 @@ import BrandIcon from '../components/BrandIcon';
 import Hero from '../components/Hero/Hero';
 import logo from '../assets/logo.png';
 import githubIcon from '../assets/github.png';
-import linkedinIcon from '../assets/Linkedin.png';
 import fullStackWorkspace from '../assets/full-stack-workspace.jpeg';
 import { projects } from '../data/projects';
 import { faqs } from '../data/faqs';
@@ -346,7 +345,7 @@ function Home() {
         <div className="closing__content">
           <p>Ready when the work matters.</p>
           <h2>Let's turn complex ideas into systems that perform.</h2>
-          <a className="button button--primary" href="https://www.upwork.com/freelancers/~replace-me" target="_blank" rel="noopener noreferrer">Connect on Upwork</a>
+          <a className="button button--primary" href="https://www.upwork.com/freelancers/~01eebebdf977448a7a" target="_blank" rel="noopener noreferrer">Connect on Upwork</a>
         </div>
       </section>
 
@@ -356,7 +355,6 @@ function Home() {
             <button className="brand" type="button" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}><img className="brand__logo" src={logo} alt="Frank Anthony" /></button>
           </div>
           <div className="site-footer__socials">
-            <a className="social-linkedin" href="https://www.linkedin.com/in/frank-lapalomento" target="_blank" rel="noopener noreferrer" aria-label="Frank Anthony on LinkedIn"><img src={linkedinIcon} alt="" /></a>
             <a href="https://github.com/franthony3987" target="_blank" rel="noopener noreferrer" aria-label="Frank Anthony on GitHub"><img src={githubIcon} alt="" /></a>
           </div>
           <div className="site-footer__bottom">

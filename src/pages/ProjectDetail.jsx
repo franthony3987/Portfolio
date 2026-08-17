@@ -3,7 +3,6 @@ import { ArrowLeft, ArrowRight, ArrowUp, Grid2X2 } from 'lucide-react';
 import './ProjectDetail.css';
 import logo from '../assets/logo.png';
 import githubIcon from '../assets/github.png';
-import linkedinIcon from '../assets/Linkedin.png';
 import { projects } from '../data/projects';
 
 function ProjectDetail({ project }) {
@@ -103,14 +102,13 @@ function ProjectDetail({ project }) {
         <div className="project-closing__content">
           <p>Ready when the work matters.</p>
           <h2>Let's turn complex ideas into systems that perform.</h2>
-          <a className="project-closing__cta" href="https://www.upwork.com/freelancers/~replace-me" target="_blank" rel="noopener noreferrer">Connect on Upwork</a>
+          <a className="project-closing__cta" href="https://www.upwork.com/freelancers/~01eebebdf977448a7a" target="_blank" rel="noopener noreferrer">Connect on Upwork</a>
         </div>
       </section>
       <footer className="project-footer">
         <div className="project-footer__inner">
           <a className="project-footer__brand" href={homeUrl} aria-label="Go to Frank Anthony homepage"><img className="project-footer__logo" src={logo} alt="Frank Anthony" /></a>
           <div className="project-footer__socials">
-            <a className="social-linkedin" href="https://www.linkedin.com/in/frank-lapalomento" target="_blank" rel="noopener noreferrer" aria-label="Frank Anthony on LinkedIn"><img src={linkedinIcon} alt="" /></a>
             <a href="https://github.com/franthony3987" target="_blank" rel="noopener noreferrer" aria-label="Frank Anthony on GitHub"><img src={githubIcon} alt="" /></a>
           </div>
           <div className="project-footer__bottom">
