@@ -1,18 +1,18 @@
-import projectOnePreview from '../assets/p-1.jpeg';
-import projectFourPreview from '../assets/p-4.jpeg';
-import projectThreePreview from '../assets/p-3.png';
-import aiRecruitingAgentPreview from '../assets/ai-recruiting-agent.png';
-import projectSixPreview from '../assets/p-6.png';
-import projectFivePreview from '../assets/p-5.png';
-import projectSevenPreview from '../assets/p-7.png';
-import projectEightPreview from '../assets/p-8.png';
-import projectThreeVideo from '../assets/p-3.mp4';
-import projectOneVideo from '../assets/p-1.mp4';
-import projectTwoVideo from '../assets/p-2.mp4';
-import projectFiveVideo from '../assets/p-5.mp4';
-import projectSixVideo from '../assets/p-6.mp4';
-import projectSevenVideo from '../assets/p-7.mp4';
-import projectEightVideo from '../assets/p-8.mp4';
+import projectOnePreview from '../assets/p-1.webp';
+import projectFourPreview from '../assets/p-4.webp';
+import projectThreePreview from '../assets/p-3.webp';
+import aiRecruitingAgentPreview from '../assets/ai-recruiting-agent.webp';
+import projectSixPreview from '../assets/p-6.webp';
+import projectFivePreview from '../assets/p-5.webp';
+import projectSevenPreview from '../assets/p-7.webp';
+import projectEightPreview from '../assets/p-8.webp';
+import projectThreeVideo from '../assets/p-3.webm';
+import projectOneVideo from '../assets/p-1.webm';
+import projectTwoVideo from '../assets/p-2.webm';
+import projectFiveVideo from '../assets/p-5.webm';
+import projectSixVideo from '../assets/p-6.webm';
+import projectSevenVideo from '../assets/p-7.webm';
+import projectEightVideo from '../assets/p-8.webm';
 
 export const projects = [
   {
