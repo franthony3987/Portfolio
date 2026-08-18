@@ -147,6 +147,7 @@ export const projects = [
     keywords: ['Data pipelines', 'Scoring systems', 'Human-in-the-loop'],
     image: projectFivePreview,
     video: projectFiveVideo,
+    videoLayout: 'standard',
     liveUrl: 'https://signalgridauto.com/',
     liveLabel: 'Live website',
     caseStudy: {
