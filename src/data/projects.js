@@ -53,6 +53,8 @@ export const projects = [
     keywords: ['AI agents', 'Candidate matching', 'Human-in-the-loop'],
     image: aiRecruitingAgentPreview,
     video: projectTwoVideo,
+    liveUrl: 'https://idr.co/',
+    liveLabel: 'Live website',
     caseStudy: {
       introduction: [
         'For Insights Driven Research (IDR), I developed this AI recruiting and candidate-intelligence system to support teams handling high volumes of resumes, profiles, job requirements, and candidate communications.',
