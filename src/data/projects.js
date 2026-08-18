@@ -8,6 +8,7 @@ import projectThreeVideo from '../assets/p-3.mp4';
 import projectOneVideo from '../assets/p-1.mp4';
 import projectTwoVideo from '../assets/p-2.mp4';
 import projectFiveVideo from '../assets/p-5.mp4';
+import projectSixVideo from '../assets/p-6.mp4';
 
 export const projects = [
   {
@@ -183,6 +184,7 @@ export const projects = [
     description: 'A source-grounded AI knowledge assistant for SunCoast Performance that turns technical documentation into fast, reliable customer and technician support.',
     keywords: ['RAG systems', 'Vector search', 'Source citations'],
     image: projectSixPreview,
+    video: projectSixVideo,
     caseStudy: {
       introduction: [
         'For SunCoast Performance, I developed a RAG-powered technical knowledge and customer-support assistant that turns fragmented manuals, warranty policies, product data, and website content into immediate, source-grounded answers.',
