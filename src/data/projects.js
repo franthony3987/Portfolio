@@ -4,6 +4,7 @@ import fintechUnderwritingPreview from '../assets/fintech-underwriting.jpeg';
 import vehicleIntelligencePreview from '../assets/vehicle-intelligence.jpeg';
 import aiRecruitingAgentPreview from '../assets/ai-recruiting-agent.png';
 import projectThreeVideo from '../assets/p-3.mp4';
+import projectTwoVideo from '../assets/p-2.mp4';
 import projectFiveVideo from '../assets/p-5.mp4';
 
 export const projects = [
@@ -48,6 +49,7 @@ export const projects = [
     description: 'A multi-agent recruiting system that searches, matches, screens, and routes qualified candidates into a recruiter-led workflow.',
     keywords: ['AI agents', 'Candidate matching', 'Human-in-the-loop'],
     image: aiRecruitingAgentPreview,
+    video: projectTwoVideo,
     caseStudy: {
       introduction: [
         'I developed this AI recruiting and candidate-intelligence system for teams handling high volumes of resumes, profiles, job requirements, and candidate communications.',
