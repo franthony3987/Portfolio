@@ -46,13 +46,13 @@ export const projects = [
     slug: 'project_2',
     title: 'AI Recruiting & Candidate Intelligence Agent System',
     subtitle: 'AI Agents & Workflow Orchestration',
-    description: 'A multi-agent recruiting system that searches, matches, screens, and routes qualified candidates into a recruiter-led workflow.',
+    description: 'A multi-agent recruiting system for Insights Driven Research (IDR) that searches, matches, screens, and routes qualified candidates into a recruiter-led workflow.',
     keywords: ['AI agents', 'Candidate matching', 'Human-in-the-loop'],
     image: aiRecruitingAgentPreview,
     video: projectTwoVideo,
     caseStudy: {
       introduction: [
-        'I developed this AI recruiting and candidate-intelligence system for teams handling high volumes of resumes, profiles, job requirements, and candidate communications.',
+        'For Insights Driven Research (IDR), I developed this AI recruiting and candidate-intelligence system to support teams handling high volumes of resumes, profiles, job requirements, and candidate communications.',
         'Rather than treating recruitment as a single chatbot interaction, I structured the experience as a sequence of specialized agents. Candidate records and role requirements move through search, matching, screening, and workflow-routing stages before a recruiter reviews the outcome.',
         'I designed the system to interpret semi-structured candidate information alongside natural-language job requirements, returning ranked recommendations, qualification signals, and a clear rationale for human review.',
         'I built the experience around a practical principle: automate repetitive analysis and workflow coordination while keeping recruiters in control of candidate relationships, communication, and final judgment.',
