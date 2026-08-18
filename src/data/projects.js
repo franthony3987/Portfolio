@@ -10,6 +10,7 @@ import projectOneVideo from '../assets/p-1.mp4';
 import projectTwoVideo from '../assets/p-2.mp4';
 import projectFiveVideo from '../assets/p-5.mp4';
 import projectSixVideo from '../assets/p-6.mp4';
+import projectSevenVideo from '../assets/p-7.mp4';
 
 export const projects = [
   {
@@ -216,6 +217,7 @@ export const projects = [
     description: 'A Kubernetes-based modernization for Ygrene Energy Fund that improved platform scalability, deployment safety, observability, and infrastructure efficiency.',
     keywords: ['Kubernetes', 'CI/CD', 'Cloud security'],
     image: projectSevenPreview,
+    video: projectSevenVideo,
     liveUrl: 'https://ygrene.com/',
     liveLabel: 'Live website',
     caseStudy: {
