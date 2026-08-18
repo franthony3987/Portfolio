@@ -83,7 +83,7 @@ export const projects = [
     image: projectThreePreview,
     video: projectThreeVideo,
     demoUrl: 'https://ra-consulting-group-homepage.noisy-frost-484e.workers.dev/prototype/funding-intelligence',
-    liveUrl: 'http://racconsultinggroup.co/',
+    liveUrl: 'https://raconsultinggroup.co/',
     liveLabel: 'Live website',
     caseStudy: {
       introduction: [
