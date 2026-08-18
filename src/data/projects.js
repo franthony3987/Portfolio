@@ -3,6 +3,7 @@ import projectFourPreview from '../assets/p-4.jpeg';
 import fintechUnderwritingPreview from '../assets/fintech-underwriting.jpeg';
 import vehicleIntelligencePreview from '../assets/vehicle-intelligence.jpeg';
 import aiRecruitingAgentPreview from '../assets/ai-recruiting-agent.png';
+import projectSixPreview from '../assets/p-6.png';
 import projectThreeVideo from '../assets/p-3.mp4';
 import projectTwoVideo from '../assets/p-2.mp4';
 import projectFiveVideo from '../assets/p-5.mp4';
@@ -163,6 +164,36 @@ export const projects = [
       technologyLabel: 'Key Technologies & Concepts',
       technology: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Node.js', 'REST APIs', 'Supabase', 'Role-based access', 'Docker', 'Playwright', 'ETL / data pipelines', 'Canonical data modeling', 'Data normalization', 'Data enrichment', 'Entity resolution', 'Deduplication', 'Scoring engines', 'Workflow routing', 'Cloudflare', 'Observability'],
       outcome: 'SignalGrid connects raw marketplace discovery to normalized data, acquisition scoring, human review, inspection workflows, and real-world purchasing operations in one scalable intelligence system.',
+    },
+  },
+  {
+    number: '06',
+    slug: 'project_6',
+    title: 'RAG Knowledge & Technical Support Assistant',
+    subtitle: 'RAG Engineering & AI Support',
+    description: 'A source-grounded AI knowledge assistant for SunCoast Performance that turns technical documentation into fast, reliable customer and technician support.',
+    keywords: ['RAG systems', 'Vector search', 'Source citations'],
+    image: projectSixPreview,
+    caseStudy: {
+      introduction: [
+        'For SunCoast Performance, I developed a RAG-powered technical knowledge and customer-support assistant that turns fragmented manuals, warranty policies, product data, and website content into immediate, source-grounded answers.',
+        'The challenge was not a lack of information. Critical answers to torque specifications, fluid requirements, compatibility questions, warranty coverage, and order policies already existed across different documents. Finding the right answer quickly was consuming technician time and slowing down customer support.',
+        'I designed and implemented a document-ingestion pipeline that extracts, chunks, embeds, and indexes technical and commercial content into a vector knowledge base. Each user question is interpreted through semantic retrieval before relevant context is passed to the LLM, producing an answer grounded in the company’s own documentation.',
+        'I also built source transparency and safe fallback behavior into the experience. When internal retrieval cannot support a confident response, the assistant can surface a clearly separated external-search path. Feedback signals help identify gaps in retrieval quality, prompt behavior, and the knowledge base over time.',
+      ],
+      features: [
+        'Document ingestion for manuals, technical specifications, warranty policies, product data, and web content',
+        'Extraction, chunking, embedding generation, and vector indexing for heterogeneous knowledge sources',
+        'Semantic retrieval that finds relevant passages beyond exact keyword matches',
+        'RAG responses grounded in approved company content with source links and citations',
+        'Technical support for product compatibility, installation, torque, fluid, warranty, return, and order questions',
+        'Confidence-aware fallback behavior when internal documentation does not provide a sufficient answer',
+        'Customer and technician-facing conversational interface with 24/7 self-service access',
+        'Feedback loop for continuously improving retrieval relevance, answer quality, and knowledge coverage',
+      ],
+      technologyLabel: 'Technology & Engineering',
+      technology: ['OpenAI', 'RAG', 'Embeddings', 'Vector database', 'Semantic search', 'Document extraction', 'Chunking strategies', 'Source citations', 'Web search fallback', 'React', 'Node.js', 'REST APIs', 'Analytics'],
+      outcome: 'Created a scalable support layer that makes trusted technical knowledge easier to access, reduces repetitive research, and helps customers and technicians move from question to verified answer faster.',
     },
   },
 ];
