@@ -5,12 +5,14 @@ import aiRecruitingAgentPreview from '../assets/ai-recruiting-agent.png';
 import projectSixPreview from '../assets/p-6.png';
 import projectFivePreview from '../assets/p-5.png';
 import projectSevenPreview from '../assets/p-7.png';
+import projectEightPreview from '../assets/p-8.png';
 import projectThreeVideo from '../assets/p-3.mp4';
 import projectOneVideo from '../assets/p-1.mp4';
 import projectTwoVideo from '../assets/p-2.mp4';
 import projectFiveVideo from '../assets/p-5.mp4';
 import projectSixVideo from '../assets/p-6.mp4';
 import projectSevenVideo from '../assets/p-7.mp4';
+import projectEightVideo from '../assets/p-8.mp4';
 
 export const projects = [
   {
@@ -240,6 +242,39 @@ export const projects = [
       technologyLabel: 'Cloud Platform & Delivery Engineering',
       technology: ['AWS', 'Docker', 'Kubernetes', 'kops', 'EC2 Spot', 'Ruby on Rails', 'Scala', 'CI/CD', 'Notary', 'Fluentd', 'Image signing', 'Centralized logging', 'Smoke testing', 'Horizontal scaling'],
       outcome: 'Delivered a more scalable, secure, observable platform with faster deployment cycles, reduced infrastructure overhead, and a dependable foundation for financial-services workloads.',
+    },
+  },
+  {
+    number: '08',
+    slug: 'project_8',
+    title: 'Enterprise Workflow Automation for Manufacturing Operations',
+    subtitle: 'Enterprise Automation & System Integration',
+    description: 'A connected operations platform for AmTab Manufacturing that synchronizes website, CRM, ERP, quotes, approvals, orders, invoices, and customer notifications.',
+    keywords: ['Power Automate', 'CRM / ERP', 'Approval workflows'],
+    image: projectEightPreview,
+    video: projectEightVideo,
+    liveUrl: 'https://www.amtab.com/',
+    liveLabel: 'Live website',
+    caseStudy: {
+      introduction: [
+        'For AmTab Manufacturing Corporation, I developed an enterprise workflow automation foundation that connects customer-facing website activity with CRM, ERP, quote processing, customer approval, order management, invoicing, and follow-up communications.',
+        'The business had grown quickly while many internal processes still depended on paper records, spreadsheets, manual data entry, and disconnected systems. Information had to move repeatedly between the website, sales workflows, and operational systems, creating avoidable handoffs and making it difficult to keep customer, product, pricing, and order data synchronized.',
+        'I designed the integration architecture around Microsoft Dynamics 365 Business Central as the operational source of truth, with CRM and NOP ecommerce systems connected through Microsoft Power Automate. Event-driven flows carry customer and product information between systems, ensuring that the next operational step happens from a consistent shared record rather than another manual transfer.',
+        'The resulting workflow supports quote generation, pricing updates, approvals, order creation, invoicing, and customer notifications while keeping people involved at the business decisions that need human judgment. It gives sales and operations a scalable, traceable path from initial request through fulfilled order.',
+      ],
+      features: [
+        'Website-to-CRM capture for customer inquiries, product codes, and account information',
+        'CRM and Microsoft Dynamics 365 Business Central synchronization for sales and operational records',
+        'Microsoft Power Automate orchestration for event-driven system-to-system workflows',
+        'Bidirectional data synchronization across customer, product, pricing, quote, and order information',
+        'Quote-to-order automation with customer approval checkpoints and business-rule validation',
+        'Order and invoice creation through the central ERP workflow',
+        'Automated customer notifications, follow-ups, and engagement communications',
+        'Human-reviewed approvals for high-value decisions while removing repetitive administrative handoffs',
+      ],
+      technologyLabel: 'Integration & Workflow Engineering',
+      technology: ['Microsoft Dynamics 365 Business Central', 'CRM', 'NOP ecommerce', 'Microsoft Power Automate', 'ERP integration', 'Workflow orchestration', 'Bidirectional sync', 'REST APIs', 'SQL', 'Approval workflows', 'Email notifications', 'Operational dashboards'],
+      outcome: 'Created a connected operational layer that replaces spreadsheet-driven handoffs with synchronized, traceable workflows and gives AmTab a more scalable foundation for sales and manufacturing operations.',
     },
   },
 ];
