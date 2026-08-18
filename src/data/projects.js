@@ -2,6 +2,7 @@ import projectOnePreview from '../assets/p-1.jpeg';
 import projectFourPreview from '../assets/p-4.jpeg';
 import fintechUnderwritingPreview from '../assets/fintech-underwriting.jpeg';
 import vehicleIntelligencePreview from '../assets/vehicle-intelligence.jpeg';
+import aiRecruitingAgentPreview from '../assets/ai-recruiting-agent.png';
 import projectThreeVideo from '../assets/p-3.mp4';
 import projectFiveVideo from '../assets/p-5.mp4';
 
@@ -42,11 +43,32 @@ export const projects = [
   {
     number: '02',
     slug: 'project_2',
-    title: 'AI Automation System',
-    subtitle: 'AI Automation',
-    description: 'An automation layer that connects business tools, interprets incoming work, and moves routine operations forward with practical AI assistance.',
-    keywords: ['Workflows', 'Integrations', 'Operations'],
-    image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1200&q=85',
+    title: 'AI Recruiting & Candidate Intelligence Agent System',
+    subtitle: 'AI Agents & Workflow Orchestration',
+    description: 'A multi-agent recruiting concept that searches, matches, screens, and routes qualified candidates into a recruiter-led workflow.',
+    keywords: ['AI agents', 'Candidate matching', 'Human-in-the-loop'],
+    image: aiRecruitingAgentPreview,
+    caseStudy: {
+      introduction: [
+        'This portfolio concept models an AI recruiting and candidate-intelligence system for teams handling high volumes of resumes, profiles, job requirements, and candidate communications.',
+        'Instead of treating recruitment as a single chatbot interaction, the experience is structured as a sequence of specialized agents. Candidate records and role requirements move through search, matching, screening, and workflow-routing stages before a recruiter reviews the outcome.',
+        'The system is designed to interpret semi-structured candidate information alongside natural-language job requirements, returning ranked recommendations, qualification signals, and a clear rationale for human review.',
+        'The concept reflects the public description of an IDR recruiting implementation using Bullhorn Amplify. The visual architecture is a portfolio research reconstruction, not a representation of IDR’s private production system.',
+      ],
+      features: [
+        'Candidate intake from resumes, profiles, recruiting databases, and job-board sources',
+        'Search agent that transforms role requirements into candidate-discovery criteria',
+        'Matching agent that evaluates skills, experience, industry context, and role fit',
+        'Screening agent for initial qualification, missing-information checks, and candidate prioritization',
+        'Orchestration layer that passes structured outcomes between specialized agents',
+        'Recruiter workspace for review, relationship management, communication, and final judgment',
+        'Traceable ranking signals and workflow status for accountable human-in-the-loop decisions',
+        'Responsive dashboard and mobile experience for pipeline visibility and daily recruiting operations',
+      ],
+      technologyLabel: 'Technology Approach',
+      technology: ['React', 'Node.js', 'Supabase', 'OpenAI', 'Agent orchestration', 'Structured outputs', 'Semantic matching', 'Workflow automation', 'Role-based access', 'REST APIs', 'Recruiter dashboards', 'Audit trails'],
+      outcome: 'Demonstrates how specialized AI agents can reduce repetitive recruiting work while keeping recruiters in control of candidate relationships and final decisions.',
+    },
   },
   {
     number: '03',
