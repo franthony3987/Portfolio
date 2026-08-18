@@ -45,9 +45,10 @@ function ProjectDetail({ project }) {
       <main className="project-page__main">
         <h1>{project.title}</h1>
         <p className="project-page__subtitle">{project.subtitle}</p>
-        {(project.liveUrl || project.githubUrl) && (
+        {(project.demoUrl || project.liveUrl || project.githubUrl) && (
           <div className="project-page__resources">
-            {project.liveUrl && <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">Visit live site</a>}
+            {project.demoUrl && <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">View live demo</a>}
+            {project.liveUrl && <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">{project.liveLabel ?? 'Visit live site'}</a>}
             {project.githubUrl && <a href={project.githubUrl} target="_blank" rel="noopener noreferrer"><img src={githubIcon} alt="" />View on GitHub</a>}
           </div>
         )}

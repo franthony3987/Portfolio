@@ -1,6 +1,6 @@
 import projectOnePreview from '../assets/p-1.jpeg';
 import projectFourPreview from '../assets/p-4.jpeg';
-import fintechUnderwritingPreview from '../assets/fintech-underwriting.jpeg';
+import projectThreePreview from '../assets/p-3.png';
 import vehicleIntelligencePreview from '../assets/vehicle-intelligence.jpeg';
 import aiRecruitingAgentPreview from '../assets/ai-recruiting-agent.png';
 import projectSixPreview from '../assets/p-6.png';
@@ -80,8 +80,11 @@ export const projects = [
     subtitle: 'FinTech Engineering & Decision Intelligence',
     description: 'An AI-powered fintech platform that turns applicant and financial data into explainable underwriting, risk, capital-matching, and consultant decision workflows.',
     keywords: ['AI underwriting', 'Financial modeling', 'Explainable AI'],
-    image: fintechUnderwritingPreview,
+    image: projectThreePreview,
     video: projectThreeVideo,
+    demoUrl: 'https://ra-consulting-group-homepage.noisy-frost-484e.workers.dev/prototype/funding-intelligence',
+    liveUrl: 'http://racconsultinggroup.co/',
+    liveLabel: 'Live website',
     caseStudy: {
       introduction: [
         'For RA Consulting Group, I designed and engineered a production-grade AI-powered fintech decision-intelligence platform that streamlines business funding qualification, underwriting analysis, risk assessment, capital matching, and consultant decision support.',

@@ -269,7 +269,7 @@ function Home() {
       <section className="section" id="projects">
         <h2 className="journey__title" data-reveal ref={projectsTitleRef}>Previous projects.</h2>
         <div className="project-grid">
-          {(showAllProjects ? projects : projects.slice(0, 3)).map(({ number, slug, title, subtitle, description, keywords, image, liveUrl, githubUrl }) => (
+          {(showAllProjects ? projects : projects.slice(0, 3)).map(({ number, slug, title, subtitle, description, keywords, image, demoUrl, liveUrl, liveLabel, githubUrl }) => (
             <article className="project-tile" key={number}>
               <a className="project__preview" href={projectUrl(slug)} aria-label={`View ${title} project`}>
                 <img src={image} alt="" />
@@ -285,9 +285,10 @@ function Home() {
               </div>
               <div className="project__footer">
                 <a className="project__link" href={projectUrl(slug)}>View project</a>
-                {(liveUrl || githubUrl) && (
+                {(demoUrl || liveUrl || githubUrl) && (
                   <div className="project__resources">
-                    {liveUrl && <a href={liveUrl} target="_blank" rel="noopener noreferrer">Live site</a>}
+                    {demoUrl && <a href={demoUrl} target="_blank" rel="noopener noreferrer">View live demo</a>}
+                    {liveUrl && <a href={liveUrl} target="_blank" rel="noopener noreferrer">{liveLabel ?? 'Live site'}</a>}
                     {githubUrl && <a href={githubUrl} target="_blank" rel="noopener noreferrer"><img src={githubIcon} alt="" />GitHub</a>}
                   </div>
                 )}
