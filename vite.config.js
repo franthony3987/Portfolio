@@ -9,11 +9,11 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: entry('./index.html'),
-        aiMultiAgentPlatform: entry('./projects/ai-multi-agent-platform/index.html'),
-        aiAutomationSystem: entry('./projects/ai-automation-system/index.html'),
-        aiDecisionEngine: entry('./projects/ai-decision-engine/index.html'),
-        multiPlatformSocialMediaPublishingSaas: entry('./projects/multi-platform-social-media-publishing-saas/index.html'),
-        dataEngineeringPlatform: entry('./projects/data-engineering-platform/index.html'),
+        project1: entry('./projects/project-1/index.html'),
+        project2: entry('./projects/project-2/index.html'),
+        project3: entry('./projects/project-3/index.html'),
+        project4: entry('./projects/project-4/index.html'),
+        project5: entry('./projects/project-5/index.html'),
       },
     },
   },

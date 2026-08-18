@@ -8,7 +8,7 @@ import projectFiveVideo from '../assets/p-5.mp4';
 export const projects = [
   {
     number: '01',
-    slug: 'ai-multi-agent-platform',
+    slug: 'project-1',
     title: 'Full-Stack AI Automation for Rental Property Operations',
     subtitle: 'Full-Stack AI Automation',
     description: 'A full-stack, AI-assisted rental platform that unifies property discovery, tenant engagement, lead qualification, and operational workflows for Rent Solutions.',
@@ -41,7 +41,7 @@ export const projects = [
   },
   {
     number: '02',
-    slug: 'ai-automation-system',
+    slug: 'project-2',
     title: 'AI Automation System',
     subtitle: 'AI Automation',
     description: 'An automation layer that connects business tools, interprets incoming work, and moves routine operations forward with practical AI assistance.',
@@ -50,7 +50,7 @@ export const projects = [
   },
   {
     number: '03',
-    slug: 'ai-decision-engine',
+    slug: 'project-3',
     title: 'FinTech AI Underwriting & Funding Intelligence Platform',
     subtitle: 'FinTech Engineering & Decision Intelligence',
     description: 'An AI-powered fintech platform that turns applicant and financial data into explainable underwriting, risk, capital-matching, and consultant decision workflows.',
@@ -81,7 +81,7 @@ export const projects = [
   },
   {
     number: '04',
-    slug: 'multi-platform-social-media-publishing-saas',
+    slug: 'project-4',
     title: 'Full-Stack SaaS for Social Media Publishing',
     subtitle: 'Full-Stack SaaS',
     description: 'A unified publishing workspace that helps teams create, schedule, approve, and measure content across every social channel from one place.',
@@ -110,7 +110,7 @@ export const projects = [
   },
   {
     number: '05',
-    slug: 'data-engineering-platform',
+    slug: 'project-5',
     title: 'SignalGrid Auto: Vehicle Acquisition Intelligence Platform',
     subtitle: 'Data Engineering & Decision Intelligence',
     description: 'A production data platform that transforms fragmented vehicle listings into normalized, scored acquisition signals for fast, human-reviewed purchasing decisions.',
