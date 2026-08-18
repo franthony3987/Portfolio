@@ -99,6 +99,11 @@
 .industry p, .stack-grid p { display: block; margin-top: 1rem; color: rgba(247, 247, 242, 0.66); line-height: 1.65; }
 
 .project-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.75rem; margin-top: 3rem; }
+.projects__reveal { display: flex; justify-content: center; margin-top: 1.5rem; }
+.projects__reveal-button { display: inline-flex; min-height: 2.7rem; align-items: center; gap: 0.55rem; padding: 0.55rem 0.85rem; border: 1px solid rgba(184, 230, 207, 0.45); border-radius: 5px; color: #d8f5e6; font: inherit; font-size: 0.82rem; font-weight: 800; cursor: pointer; background: rgba(184, 230, 207, 0.08); transition: color 180ms ease, border-color 180ms ease, background-color 180ms ease, transform 180ms ease; }
+.projects__reveal-button svg { width: 1rem; height: 1rem; transition: transform 180ms ease; }
+.projects__reveal-button:hover { border-color: #9fe6c1; color: #ffffff; background: rgba(159, 230, 193, 0.16); transform: translateY(-2px); }
+.projects__reveal-button:hover svg { transform: translateY(2px); }
 #projects { scroll-margin-top: 1.5rem; }
 .project-tile { display: flex; flex-direction: column; overflow: hidden; border: 1px solid rgba(184, 230, 207, 0.3); border-radius: 8px; background: linear-gradient(145deg, rgba(46, 68, 51, 0.5), rgba(20, 33, 23, 0.95)); box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), inset 0 -2px rgba(5, 12, 7, 0.42); transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1), border-color 300ms ease, box-shadow 300ms ease; }
 .project-tile:hover { border-color: rgba(184, 230, 207, 0.7); box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.28), inset 0 1px rgba(255, 255, 255, 0.13); transform: translateY(-0.4rem); }

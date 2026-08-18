@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { ArrowUp, Bot, Boxes, Cloud, Code2, Database, Network, Server, ShieldCheck, Workflow } from 'lucide-react';
+import { ArrowUp, Bot, Boxes, ChevronDown, Cloud, Code2, Database, Network, Server, ShieldCheck, Workflow } from 'lucide-react';
 import { siAnthropic, siDocker, siFastapi, siGithubactions, siGooglegemini, siGooglecloud, siKubernetes, siLangchain, siLanggraph, siMongodb, siNextdotjs, siNodedotjs, siPostgresql, siPython, siPytorch, siReact, siRedis, siTailwindcss, siTensorflow, siTerraform, siTypescript } from 'simple-icons';
 import BrandIcon from '../components/BrandIcon';
 import Hero from '../components/Hero/Hero';
@@ -111,6 +111,7 @@ function Home() {
   const techTitleRef = useRef(null);
   const faqTitleRef = useRef(null);
   const [activeBuildArea, setActiveBuildArea] = useState(0);
+  const [showAllProjects, setShowAllProjects] = useState(false);
   const [openFaq, setOpenFaq] = useState(-1);
   const [isHeaderCompact, setIsHeaderCompact] = useState(false);
   const [globeRotation, setGlobeRotation] = useState({ x: -8, y: 0 });
@@ -268,7 +269,7 @@ function Home() {
       <section className="section" id="projects">
         <h2 className="journey__title" data-reveal ref={projectsTitleRef}>Previous projects.</h2>
         <div className="project-grid">
-          {projects.map(({ number, slug, title, subtitle, description, keywords, image, liveUrl, githubUrl }) => (
+          {(showAllProjects ? projects : projects.slice(0, 3)).map(({ number, slug, title, subtitle, description, keywords, image, liveUrl, githubUrl }) => (
             <article className="project-tile" key={number}>
               <a className="project__preview" href={projectUrl(slug)} aria-label={`View ${title} project`}>
                 <img src={image} alt="" />
@@ -294,6 +295,14 @@ function Home() {
             </article>
           ))}
         </div>
+        {!showAllProjects && projects.length > 3 && (
+          <div className="projects__reveal">
+            <button className="projects__reveal-button" type="button" onClick={() => setShowAllProjects(true)}>
+              <span>Show more projects</span>
+              <ChevronDown aria-hidden="true" strokeWidth={2.25} />
+            </button>
+          </div>
+        )}
       </section>
 
       <section className="section tech-stack" id="tech-stack">
