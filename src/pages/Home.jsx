@@ -366,7 +366,7 @@ function Home() {
             <button className="brand" type="button" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}><img className="brand__logo" src={logo} alt="Frank Anthony" /></button>
           </div>
           <div className="site-footer__socials">
-            <a href="https://github.com/franthony3987" target="_blank" rel="noopener noreferrer" aria-label="Frank Anthony on GitHub"><img src={githubIcon} alt="" /></a>
+            <a href="https://github.com/franthony03987" target="_blank" rel="noopener noreferrer" aria-label="Frank Anthony on GitHub"><img src={githubIcon} alt="" /></a>
           </div>
           <div className="site-footer__bottom">
             <span>© 2026 Frank Anthony</span>

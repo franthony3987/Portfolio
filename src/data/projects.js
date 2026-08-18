@@ -23,7 +23,7 @@ export const projects = [
     image: projectOnePreview,
     video: projectOneVideo,
     liveUrl: 'https://www.rentsolutions.com/',
-    githubUrl: 'https://github.com/franthony3987',
+    githubUrl: 'https://github.com/franthony03987',
     caseStudy: {
       preview: true,
       introduction: [

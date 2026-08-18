@@ -35,7 +35,7 @@ function Hero() {
           <a className="button button--secondary" href="https://www.upwork.com/freelancers/~01eebebdf977448a7a" target="_blank" rel="noopener noreferrer">Connect on Upwork</a>
           <span className="hero__socials">
             <a className="social-linkedin" href="https://www.linkedin.com/in/frank-lapalomento" target="_blank" rel="noopener noreferrer" aria-label="Frank Anthony on LinkedIn"><img src={linkedinIcon} alt="" /></a>
-            <a href="https://github.com/franthony3987" target="_blank" rel="noopener noreferrer" aria-label="Frank Anthony on GitHub"><img src={githubIcon} alt="" /></a>
+            <a href="https://github.com/franthony03987" target="_blank" rel="noopener noreferrer" aria-label="Frank Anthony on GitHub"><img src={githubIcon} alt="" /></a>
           </span>
         </div>
       </div>

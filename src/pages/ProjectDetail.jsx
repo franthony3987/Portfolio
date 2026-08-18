@@ -110,7 +110,7 @@ function ProjectDetail({ project }) {
         <div className="project-footer__inner">
           <a className="project-footer__brand" href={homeUrl} aria-label="Go to Frank Anthony homepage"><img className="project-footer__logo" src={logo} alt="Frank Anthony" /></a>
           <div className="project-footer__socials">
-            <a href="https://github.com/franthony3987" target="_blank" rel="noopener noreferrer" aria-label="Frank Anthony on GitHub"><img src={githubIcon} alt="" /></a>
+            <a href="https://github.com/franthony03987" target="_blank" rel="noopener noreferrer" aria-label="Frank Anthony on GitHub"><img src={githubIcon} alt="" /></a>
           </div>
           <div className="project-footer__bottom">
             <span>© 2026 Frank Anthony</span>
