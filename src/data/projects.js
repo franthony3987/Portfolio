@@ -45,15 +45,15 @@ export const projects = [
     slug: 'project_2',
     title: 'AI Recruiting & Candidate Intelligence Agent System',
     subtitle: 'AI Agents & Workflow Orchestration',
-    description: 'A multi-agent recruiting concept that searches, matches, screens, and routes qualified candidates into a recruiter-led workflow.',
+    description: 'A multi-agent recruiting system that searches, matches, screens, and routes qualified candidates into a recruiter-led workflow.',
     keywords: ['AI agents', 'Candidate matching', 'Human-in-the-loop'],
     image: aiRecruitingAgentPreview,
     caseStudy: {
       introduction: [
-        'I developed this portfolio concept to model an AI recruiting and candidate-intelligence system for teams handling high volumes of resumes, profiles, job requirements, and candidate communications.',
+        'I developed this AI recruiting and candidate-intelligence system for teams handling high volumes of resumes, profiles, job requirements, and candidate communications.',
         'Rather than treating recruitment as a single chatbot interaction, I structured the experience as a sequence of specialized agents. Candidate records and role requirements move through search, matching, screening, and workflow-routing stages before a recruiter reviews the outcome.',
         'I designed the system to interpret semi-structured candidate information alongside natural-language job requirements, returning ranked recommendations, qualification signals, and a clear rationale for human review.',
-        'This concept is informed by the public description of an IDR recruiting implementation using Bullhorn Amplify. The visual architecture is my portfolio research reconstruction, not a representation of IDR’s private production system.',
+        'I built the experience around a practical principle: automate repetitive analysis and workflow coordination while keeping recruiters in control of candidate relationships, communication, and final judgment.',
       ],
       features: [
         'Candidate intake from resumes, profiles, recruiting databases, and job-board sources',
