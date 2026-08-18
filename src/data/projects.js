@@ -4,6 +4,7 @@ import projectThreePreview from '../assets/p-3.png';
 import aiRecruitingAgentPreview from '../assets/ai-recruiting-agent.png';
 import projectSixPreview from '../assets/p-6.png';
 import projectFivePreview from '../assets/p-5.png';
+import projectSevenPreview from '../assets/p-7.png';
 import projectThreeVideo from '../assets/p-3.mp4';
 import projectOneVideo from '../assets/p-1.mp4';
 import projectTwoVideo from '../assets/p-2.mp4';
@@ -205,6 +206,38 @@ export const projects = [
       technologyLabel: 'Technology & Engineering',
       technology: ['OpenAI', 'RAG', 'Embeddings', 'Vector database', 'Semantic search', 'Document extraction', 'Chunking strategies', 'Source citations', 'Web search fallback', 'React', 'Node.js', 'REST APIs', 'Analytics'],
       outcome: 'Created a scalable support layer that makes trusted technical knowledge easier to access, reduces repetitive research, and helps customers and technicians move from question to verified answer faster.',
+    },
+  },
+  {
+    number: '07',
+    slug: 'project_7',
+    title: 'Cloud-Native Financing Platform Modernization',
+    subtitle: 'Cloud Architecture & DevOps',
+    description: 'A Kubernetes-based modernization for Ygrene Energy Fund that improved platform scalability, deployment safety, observability, and infrastructure efficiency.',
+    keywords: ['Kubernetes', 'CI/CD', 'Cloud security'],
+    image: projectSevenPreview,
+    liveUrl: 'https://ygrene.com/',
+    liveLabel: 'Live website',
+    caseStudy: {
+      introduction: [
+        'For Ygrene Energy Fund, I modernized a financing platform that needed to process growing data volumes and background workloads without compromising application security, customer availability, or engineering velocity.',
+        'The existing environment depended heavily on large servers and vertical scaling. As demand increased, background requests created instability, user-facing performance suffered, and deployments remained slow and risky. Moving the same architecture to managed hosting alone did not solve the underlying workload and integration constraints.',
+        'I led the transition toward a cloud-native architecture by containerizing Ruby on Rails and Scala services with Docker, distributing workloads through Kubernetes, and operating the cluster on AWS infrastructure. This created a consistent deployment unit, horizontal scalability, and a path to evolve production infrastructure without a disruptive application rewrite.',
+        'I also strengthened the delivery platform with automated deployment workflows, trusted container-image controls, centralized logging, and observability. The result was a more resilient financing environment where teams could release during business hours, monitor distributed behavior, and scale workloads with greater confidence.',
+      ],
+      features: [
+        'Architecture assessment for vertical-scaling limits, workload bottlenecks, service dependencies, and production risk',
+        'Docker containerization of Ruby on Rails and Scala application services',
+        'Kubernetes orchestration for workload distribution, horizontal scaling, and resilient application operations',
+        'AWS infrastructure design using EC2 Spot capacity and kops cluster management',
+        'Automated CI/CD workflow with deployment checks and smoke-testing steps',
+        'Notary-backed image signing to separate trusted production images from development artifacts',
+        'Fluentd-based centralized logging and observability across application and infrastructure layers',
+        'Zero-downtime deployment patterns for normal business-hour releases and database migrations',
+      ],
+      technologyLabel: 'Cloud Platform & Delivery Engineering',
+      technology: ['AWS', 'Docker', 'Kubernetes', 'kops', 'EC2 Spot', 'Ruby on Rails', 'Scala', 'CI/CD', 'Notary', 'Fluentd', 'Image signing', 'Centralized logging', 'Smoke testing', 'Horizontal scaling'],
+      outcome: 'Delivered a more scalable, secure, observable platform with faster deployment cycles, reduced infrastructure overhead, and a dependable foundation for financial-services workloads.',
     },
   },
 ];

@@ -15,6 +15,7 @@ export default defineConfig({
         project4: entry('./projects/project_4/index.html'),
         project5: entry('./projects/project_5/index.html'),
         project6: entry('./projects/project_6/index.html'),
+        project7: entry('./projects/project_7/index.html'),
       },
     },
   },
