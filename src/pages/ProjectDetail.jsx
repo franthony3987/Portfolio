@@ -56,7 +56,7 @@ function ProjectDetail({ project }) {
           <article className="project-case-study">
             {project.video ? (
               <div className={`project-case-study__video${project.videoLayout ? ` project-case-study__video--${project.videoLayout}` : ''}`}>
-                <video controls playsInline preload="metadata" poster={project.image}>
+                <video controls muted playsInline preload="metadata" poster={project.image}>
                   <source src={project.video} type="video/mp4" />
                   Your browser does not support embedded video.
                 </video>
