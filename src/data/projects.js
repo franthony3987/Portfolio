@@ -1,9 +1,9 @@
 import projectOnePreview from '../assets/p-1.jpeg';
 import projectFourPreview from '../assets/p-4.jpeg';
 import projectThreePreview from '../assets/p-3.png';
-import vehicleIntelligencePreview from '../assets/vehicle-intelligence.jpeg';
 import aiRecruitingAgentPreview from '../assets/ai-recruiting-agent.png';
 import projectSixPreview from '../assets/p-6.png';
+import projectFivePreview from '../assets/p-5.png';
 import projectThreeVideo from '../assets/p-3.mp4';
 import projectOneVideo from '../assets/p-1.mp4';
 import projectTwoVideo from '../assets/p-2.mp4';
@@ -145,9 +145,11 @@ export const projects = [
     subtitle: 'Data Engineering & Decision Intelligence',
     description: 'A production data platform that transforms fragmented vehicle listings into normalized, scored acquisition signals for fast, human-reviewed purchasing decisions.',
     keywords: ['Data pipelines', 'Scoring systems', 'Human-in-the-loop'],
-    image: vehicleIntelligencePreview,
+    image: projectFivePreview,
     video: projectFiveVideo,
     videoLayout: 'compact',
+    liveUrl: 'https://signalgridauto.com/',
+    liveLabel: 'Live website',
     caseStudy: {
       introduction: [
         'SignalGrid Auto is a production-grade data engineering and decision-intelligence platform for private-party vehicle acquisition. I designed it to identify under-market opportunities, structure fragmented marketplace data, rank acquisition potential, and support human-reviewed purchasing decisions.',
