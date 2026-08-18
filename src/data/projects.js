@@ -5,6 +5,7 @@ import vehicleIntelligencePreview from '../assets/vehicle-intelligence.jpeg';
 import aiRecruitingAgentPreview from '../assets/ai-recruiting-agent.png';
 import projectSixPreview from '../assets/p-6.png';
 import projectThreeVideo from '../assets/p-3.mp4';
+import projectOneVideo from '../assets/p-1.mp4';
 import projectTwoVideo from '../assets/p-2.mp4';
 import projectFiveVideo from '../assets/p-5.mp4';
 
@@ -17,6 +18,7 @@ export const projects = [
     description: 'A full-stack, AI-assisted rental platform that unifies property discovery, tenant engagement, lead qualification, and operational workflows for Rent Solutions.',
     keywords: ['AI operations', 'Tenant portal', 'Lead automation'],
     image: projectOnePreview,
+    video: projectOneVideo,
     liveUrl: 'https://www.rentsolutions.com/',
     githubUrl: 'https://github.com/franthony3987',
     caseStudy: {
